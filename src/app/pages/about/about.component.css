@@ -1,0 +1,19 @@
+h1{
+    color:rgb(160, 8, 64);
+    border-bottom: solid 2px rgb(122, 0, 65);
+}
+
+#mi-foto{
+    width: 20rem;
+    height: 23rem;;
+    object-fit: cover;
+    object-position: 50% 15%;
+    border-radius: 3rem;
+}
+
+.bold{
+    font-weight: bold;
+    margin-right: .5rem;
+    color:darkred;
+}
+

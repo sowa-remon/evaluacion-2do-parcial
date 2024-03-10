@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.in{
+    background-color:rgb(34, 156, 109);  
+    }
+    
+.in:hover{
+        background-color: rgb(27, 121, 85);
+    }
+
+.up{
+    background-color: burlywood;
+}
+.up:hover{
+    background-color: rgb(180, 149, 109);
+}
+
+.del{
+    background-color:tomato;
+}
+.del:hover{
+    background-color:rgb(205, 78, 56);
+}
+
+.space-around{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.select{
+    margin-left: 2rem;
+}

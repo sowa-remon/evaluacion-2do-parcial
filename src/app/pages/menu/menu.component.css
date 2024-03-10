@@ -1,0 +1,13 @@
+ul{
+    justify-content: center;
+}
+
+.nav-link{
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    background-color: darkslateblue;
+    color: aliceblue;
+}

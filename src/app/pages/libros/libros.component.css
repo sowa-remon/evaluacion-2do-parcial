@@ -1,0 +1,32 @@
+
+
+h1{
+    text-align: center;
+    margin: 2rem 0;
+    padding-bottom: 1rem;
+    border-bottom: solid 2px teal;
+}
+
+table{
+    text-align: center;
+}
+
+button{
+    color: aliceblue;
+    font-weight: bold;
+    border: none;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+}
+
+button:hover{
+    color: aliceblue;
+}
+
+.sel{
+    background-color: cadetblue;
+}
+
+.sel:hover{
+    background-color: rgb(71, 116, 117);
+}

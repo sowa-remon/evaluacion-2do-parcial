@@ -1,0 +1,63 @@
+<div class="container">
+    <h1>Agenda</h1>
+    <div class="row">
+        <div class="col-8">
+            <table class="table">
+                <thead>
+                    <th>Título</th>
+                    <th>Asunto</th>
+                    <th>Descripción</th>
+                    <th>Fecha</th>
+                    <th>Urgente</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let tarea of tareas">
+                        <td>{{tarea.titulo}}</td>
+                        <td>{{tarea.asunto}}</td>
+                        <td>{{tarea.descripcion}}</td>
+                        <td>{{tarea.fecha}}</td>
+                        <td>{{tarea.urgencia}}</td>
+                        <td>
+                            <button type="button" class="btn sel" (click)="this.selectTarea(tarea)">Seleccionar</button>
+                        </td>
+                    </tr>
+                </tbody>        
+            </table>
+        </div>
+        <div class="col">
+            <h5>Crear nueva tarea</h5>
+            <p><label for="">Título</label>
+                <input type="text" class="form-control" [(ngModel)]="tarea.titulo">
+            </p> 
+            <p><label for="">Asunto</label>
+                <select name="" class="select"  [(ngModel)]="tarea.asunto">
+                    <option value="Personal">Personal</option>
+                    <option value="Académico">Académico</option>
+                    <option value="Laboral">Laboral</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </p>           
+            <p><label for="">Descripción</label>
+                <input type="text" class="form-control" [(ngModel)]="tarea.descripcion">
+            </p>            
+            <p><label for="">Fecha</label>
+                <input type="date" class="form-control" [(ngModel)]="tarea.fecha">
+            </p>
+            <p><label for="">Urgencia</label>
+                <select name="" class="select"  [(ngModel)]="tarea.urgencia">
+                    <option value="Nada importante">Nada importante</option>
+                    <option value="Poco importante">Poco importante</option>
+                    <option value="Importante">Importante</option>
+                    <option value="Muy importante">Muy importante</option>
+                    <option value="De vida o muerte">De vida o muerte</option>
+                </select>
+            </p>
+
+            <div class="space-around">
+                <button type="button" class="btn in" (click)="this.insertarTarea()">Insertar</button>
+                <button type="button" class="btn up" (click)="this.updateTarea()">Actualizar </button>
+                <button type="button" class="btn del" (click)="this.deleteTarea(tarea.id)">Eliminar</button>    
+            </div>
+        </div>
+</div>
+</div>

@@ -1,0 +1,52 @@
+<div class="container">
+    <h1>Registro de Clientes</h1>
+    <div class="row">
+        <div class="col-8">
+            <table class="table">
+                <thead>
+                    <th>Nombre</th>
+                    <th>RFC</th>
+                    <th>Domicilio</th>
+                    <th>Tipo de cliente</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let cliente of clientes">
+                        <td>{{cliente.nombre}}</td>
+                        <td>{{cliente.rfc}}</td>
+                        <td>{{cliente.domicilio}}</td>
+                        <td>{{cliente.tipoCliente}}</td>
+                        <td>
+                            <button type="button" class="btn sel" (click)="this.selectCliente(cliente)">Seleccionar</button>
+                        </td>
+                    </tr>
+                </tbody>        
+            </table>
+        </div>
+        <div class="col">
+            <h5>Dar de alta un cliente</h5>
+            <p><label for="">Nombre</label>
+                <input type="text" class="form-control" [(ngModel)]="cliente.nombre">
+            </p>            
+            <p><label for="">RFC</label>
+                <input type="text" class="form-control" [(ngModel)]="cliente.rfc">
+            </p>            
+            <p><label for="">Domicilio</label>
+                <input type="text" class="form-control" [(ngModel)]="cliente.domicilio">
+            </p>
+            <p><label for="">Tipo de cliente</label>
+                <select name="" class="select"  [(ngModel)]="cliente.tipoCliente">
+                    <option value="Sin definir">Sin definir</option>
+                    <option value="Activo">Activo</option>
+                    <option value="Inactivo">Inactivo</option>
+                    <option value="Deudor">Deudor</option>
+                </select>
+            </p>
+
+            <div class="space-around">
+                <button type="button" class="btn in" (click)="this.insertarCliente()">Insertar</button>
+                <button type="button" class="btn up" (click)="this.updateCliente()">Actualizar </button>
+                <button type="button" class="btn del" (click)="this.deleteCliente(cliente.id)">Eliminar</button>    
+            </div>
+        </div>
+</div>
+</div>
